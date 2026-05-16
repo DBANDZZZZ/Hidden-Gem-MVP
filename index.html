@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Gems | Curated Restaurant Guide</title>
+    <meta name="description" content="Discover the city's finest dining experiences. A curated restaurant guide featuring black and beige elegance.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Hidden Gems",
+      "url": "https://www.hiddengemsguide.com/",
+      "description": "Curated restaurant guide featuring the city's finest dining experiences."
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">HIDDEN GEM</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">The Guide</a></li>
+                <li><a href="#sf2026" class="nav-link">San Francisco 2026</a></li>
+                <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up" style="font-size: 4.4rem;">Not Every Table. The Right Ones.</h1>
+            <p class="fade-in-up delay-1"><span style="color: var(--clr-beige); font-family: var(--font-heading); font-size: 2.2rem; font-style: italic; display: inline-block; margin-top: 10px;">The City's Best Tables</span></p>
+            <a href="#sf2026" class="fade-in-up delay-2" style="font-size: 1rem; color: var(--clr-beige); text-decoration: underline; background: none; border: none; font-family: var(--font-body); display: inline-block; margin-top: 2rem; font-weight: 500;">20 Restaurants - San Francisco 2026</a>
+            
+            <div class="stat-pills fade-in-up delay-3" style="display: flex; gap: 1.5rem; align-items: center; justify-content: center; margin-top: 8rem; flex-wrap: wrap; color: var(--clr-white); font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase;">
+                <span class="stat-pill">20 Restaurants</span>
+                <span style="color: var(--clr-beige);">&bull;</span>
+                <span class="stat-pill">One Pass</span>
+                <span style="color: var(--clr-beige);">&bull;</span>
+                <span class="stat-pill">Updated Yearly</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="sf2026" class="section bg-dark text-light" style="padding-bottom: 0;">
+            <div class="container" style="max-width: 800px; text-align: center; margin: 0 auto;">
+                <div class="about-content fade-in">
+                    <h2>San Francisco 2026 Guide</h2>
+                    <p>Twenty of the city's best restaurants, hand-selected for people who take dining seriously. Each pass unlocks $25 in credits off your total bill when dining with at least one other guest and purchasing at least 2 entrees.</p>
+                    <p style="margin-top: 1rem;">A perfect gift. A better night out. An excuse to finally try the places you've been meaning to.</p>
+                    <div style="margin-top: 2.5rem;">
+                        <p style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; font-family: var(--font-heading);">$100 &middot; Includes $500 in dining credits</p>
+                        <a href="#purchase" class="btn-solid">Purchase Book</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="book-slider-section">
+            <div class="book-slider-container">
+                <div class="book-slider-track" id="bookSliderTrack">
+                    <!-- Slide 1: Book Cover -->
+                    <div class="book-slide">
+                        <img src="assets/book.png" alt="San Francisco 2026 Guide Book" loading="lazy" style="max-height: 550px; width: auto; display: block; margin: 0 auto; border: 2px solid rgba(201,169,110,0.5); border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    </div>
+
+                    <!-- Slide 2: Map -->
+                    <div class="book-slide">
+                        <div class="book-spread single-page-spread">
+                            <div class="book-page full-page map-page-full">
+                                <div class="map-top-section" style="background: #c8d5c0;">
+                                    <svg width="100%" height="100%" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Water Background -->
+                                        <rect width="1000" height="400" fill="#8faab8"/>
+                                        
+                                        <defs>
+                                            <!-- SF Peninsula Shape Approximation -->
+                                            <path id="sf-shape" d="M 150 400 L 150 150 C 150 80, 200 50, 250 40 C 400 30, 500 50, 600 30 C 700 20, 800 50, 850 100 C 900 150, 800 250, 850 300 L 850 400 Z" />
+                                            <clipPath id="sf-land">
+                                                <use href="#sf-shape" />
+                                            </clipPath>
+                                            <!-- Pin Shadow -->
+                                            <filter id="pin-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                                                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/>
+                                            </filter>
+                                        </defs>
+                                        
+                                        <!-- Land Fill -->
+                                        <use href="#sf-shape" fill="#c8d5c0"/>
+                                        
+                                        <!-- Street Grid (clipped to land) -->
+                                        <g clip-path="url(#sf-land)">
+                                            <g stroke="#b0bfaa" stroke-width="1.5" opacity="0.6">
+                                                <g transform="rotate(-5, 500, 200)">
+                                                    <line x1="-200" y1="50" x2="1200" y2="50"/>
+                                                    <line x1="-200" y1="100" x2="1200" y2="100"/>
+                                                    <line x1="-200" y1="150" x2="1200" y2="150"/>
+                                                    <line x1="-200" y1="200" x2="1200" y2="200"/>
+                                                    <line x1="-200" y1="250" x2="1200" y2="250"/>
+                                                    <line x1="-200" y1="300" x2="1200" y2="300"/>
+                                                    <line x1="-200" y1="350" x2="1200" y2="350"/>
+                                                    <line x1="-200" y1="400" x2="1200" y2="400"/>
+                                                    <line x1="100" y1="-100" x2="100" y2="500"/>
+                                                    <line x1="200" y1="-100" x2="200" y2="500"/>
+                                                    <line x1="300" y1="-100" x2="300" y2="500"/>
+                                                    <line x1="400" y1="-100" x2="400" y2="500"/>
+                                                    <line x1="500" y1="-100" x2="500" y2="500"/>
+                                                    <line x1="600" y1="-100" x2="600" y2="500"/>
+                                                    <line x1="700" y1="-100" x2="700" y2="500"/>
+                                                    <line x1="800" y1="-100" x2="800" y2="500"/>
+                                                    <line x1="900" y1="-100" x2="900" y2="500"/>
+                                                </g>
+                                            </g>
+                                            <!-- Labels -->
+                                            <g font-family="Playfair Display, serif" font-style="italic" font-size="11px" fill="#4a5a44">
+                                                <text x="500" y="260">Mission</text>
+                                                <text x="400" y="200">Hayes Valley</text>
+                                                <text x="650" y="80">North Beach</text>
+                                                <text x="600" y="180">SoMa</text>
+                                                <text x="320" y="120">Pacific Heights</text>
+                                                <text x="320" y="80">Marina</text>
+                                                <text x="360" y="290">Castro</text>
+                                                <text x="480" y="180">Tenderloin</text>
+                                            </g>
+                                        </g>
+                                        
+                                        <!-- Pins -->
+                                        <g filter="url(#pin-shadow)">
+                                            <g transform="translate(500, 260)"><circle cx="0" cy="0" r="7" fill="#c9a96e"/><circle cx="0" cy="0" r="2.5" fill="#ffffff"/></g>
+                                            <g transform="translate(400, 200)"><circle cx="0" cy="0" r="7" fill="#c9a96e"/><circle cx="0" cy="0" r="2.5" fill="#ffffff"/></g>
+                                            <g transform="translate(650, 80)"><circle cx="0" cy="0" r="7" fill="#c9a96e"/><circle cx="0" cy="0" r="2.5" fill="#ffffff"/></g>
+                                            <g transform="translate(600, 180)"><circle cx="0" cy="0" r="7" fill="#c9a96e"/><circle cx="0" cy="0" r="2.5" fill="#ffffff"/></g>
+                                            <g transform="translate(320, 120)"><circle cx="0" cy="0" r="7" fill="#c9a96e"/><circle cx="0" cy="0" r="2.5" fill="#ffffff"/></g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="map-bottom-section" style="padding: 25px 35px; background-color: #f8f4ee;">
+                                    <div class="legend-header" style="font-family: var(--font-heading); font-weight: 700; font-size: 28px; color: #1a1208; margin-top: 0; margin-bottom: 15px;">Legend</div>
+                                    <ol style="margin: 0; padding: 0 0 0 20px; font-family: var(--font-body); font-size: 11px; color: #1a1208; column-count: 4; column-gap: 20px; line-height: 1.8;">
+                                        <li></li><li></li><li></li><li></li><li></li>
+                                        <li></li><li></li><li></li><li></li><li></li>
+                                        <li></li><li></li><li></li><li></li><li></li>
+                                        <li></li><li></li><li></li><li></li><li></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Chef Feature -->
+                    <div class="book-slide">
+                        <div class="book-spread">
+                            <div class="book-page left-page feature-page-left">
+                                <div class="chef-photo-placeholder-full">
+                                    <div class="interior-pattern"></div>
+                                    <div class="chef-silhouette-area">
+                                        <span class="photo-label">Chef &amp; Owner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-spine"></div>
+                            <div class="book-page right-page feature-page-right">
+                                <div class="restaurant-header">
+                                    <div class="eyebrow">Featured Restaurant</div>
+                                    <div class="restaurant-name">Restaurant Name</div>
+                                    <div class="restaurant-meta">Neighborhood &middot; Cuisine Type</div>
+                                </div>
+                                <div class="restaurant-about">
+                                    <div class="about-label">About</div>
+                                    <p class="about-copy">A placeholder description written in an editorial voice &mdash; specific, warm, authoritative. This is the story of the restaurant, the chef's philosophy, and what earned it a place in the Hidden Gem guide. One paragraph, no more.</p>
+                                </div>
+                                <hr class="gold-divider">
+                                <div class="signature-section">
+                                    <div class="signature-label">Chef's Signature</div>
+                                    <div class="signature-space">
+                                        <div class="signature-baseline"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Memories -->
+                    <div class="book-slide">
+                        <div class="book-spread">
+                            <div class="book-page left-page notes-page">
+                                <div class="notes-header" style="font-family: var(--font-heading); font-weight: 700; font-style: italic; font-size: 32px; color: #1a1208; margin-bottom: 2rem;">Memories</div>
+                            </div>
+                            <div class="book-spine"></div>
+                            <div class="book-page right-page photo-page">
+                                <div class="photo-collage">
+                                    <div class="photo-large">
+                                        <span class="photo-label">Ambiance</span>
+                                    </div>
+                                    <div class="photo-small-container">
+                                        <div class="photo-small food">
+                                            <span class="photo-label">The Food</span>
+                                        </div>
+                                        <div class="photo-small room">
+                                            <span class="photo-label">The Room</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-arrow slider-prev" aria-label="Previous Spread">
+                    <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4L4 20L20 36" stroke="#c9a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="slider-arrow slider-next" aria-label="Next Spread">
+                    <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4L20 20L4 36" stroke="#c9a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="slider-dots" id="sliderDots">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="section bg-dark text-light" style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <div class="section-header fade-in" style="text-align: center; margin-bottom: 4rem;">
+                    <h4 style="color: var(--clr-beige); font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; font-family: var(--font-body);">The Pass</h4>
+                    <h2 style="font-size: 3rem; margin-bottom: 0.5rem;">How it Works</h2>
+                    <p style="color: var(--clr-gray); font-size: 1.1rem;">Simple to Buy. Even simpler to Use.</p>
+                </div>
+                
+                <div class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center; margin-bottom: 4rem;">
+                    <div class="category-item fade-in" style="background-color: transparent; border: none; padding: 0;">
+                        <div class="category-icon" style="font-family: var(--font-heading); font-size: 2rem; color: var(--clr-beige); margin: 0 auto 1.5rem auto; width: 60px; height: 60px; border: 2px solid var(--clr-beige); border-radius: 50%; display: flex; align-items: center; justify-content: center;">1</div>
+                        <h3 style="color: var(--clr-white); margin-bottom: 1rem; font-size: 1.5rem;">Buy the Guide</h3>
+                        <p style="color: var(--clr-gray); font-size: 1rem; line-height: 1.6;">Purchase or Gift your Hidden Gem pass for $100. You'll receive the physical book, your key to the restaurants in the guide.</p>
+                    </div>
+                    <div class="category-item fade-in delay-1" style="background-color: transparent; border: none; padding: 0;">
+                        <div class="category-icon" style="font-family: var(--font-heading); font-size: 2rem; color: var(--clr-beige); margin: 0 auto 1.5rem auto; width: 60px; height: 60px; border: 2px solid var(--clr-beige); border-radius: 50%; display: flex; align-items: center; justify-content: center;">2</div>
+                        <h3 style="color: var(--clr-white); margin-bottom: 1rem; font-size: 1.5rem;">Choose a Restaurant</h3>
+                        <p style="color: var(--clr-gray); font-size: 1rem; line-height: 1.6;">Browse the 20 picks in the guide. Each listing shows the restaurant, neighborhood, cuisine, and exactly what your $25 credit covers, no surprises.</p>
+                    </div>
+                    <div class="category-item fade-in delay-2" style="background-color: transparent; border: none; padding: 0;">
+                        <div class="category-icon" style="font-family: var(--font-heading); font-size: 2rem; color: var(--clr-beige); margin: 0 auto 1.5rem auto; width: 60px; height: 60px; border: 2px solid var(--clr-beige); border-radius: 50%; display: flex; align-items: center; justify-content: center;">3</div>
+                        <h3 style="color: var(--clr-white); margin-bottom: 1rem; font-size: 1.5rem;">Show Up &amp; Enjoy</h3>
+                        <p style="color: var(--clr-gray); font-size: 1rem; line-height: 1.6;">Book directly with the restaurant mentioning you have the guide. At the end of your meal, receive a stamp or signature in the guide in exchange for your dining credit.</p>
+                    </div>
+                </div>
+
+                <div class="rules-grid fade-in delay-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: left;">
+                    <div style="background-color: var(--clr-black-light); padding: 1.5rem; border-radius: var(--border-radius); border: 1px solid rgba(212, 175, 55, 0.2);">
+                        <h4 style="color: var(--clr-beige); font-size: 1.1rem; margin-bottom: 0.8rem;">Redemption</h4>
+                        <p style="color: var(--clr-gray); font-size: 0.9rem;">Your pass is valid at each of the 20 restaurants once. Come back as often as you like on your own, but the credit applies to your first visit only. Valid through December 31, 2026.</p>
+                    </div>
+                    <div style="background-color: var(--clr-black-light); padding: 1.5rem; border-radius: var(--border-radius); border: 1px solid rgba(212, 175, 55, 0.2);">
+                        <h4 style="color: var(--clr-beige); font-size: 1.1rem; margin-bottom: 0.8rem;">The Credit</h4>
+                        <p style="color: var(--clr-gray); font-size: 0.9rem;">Each redemption takes $25 off your total check. You must dine with at least one other person and purchase at least 2 entrees. No minimum spend, no category restrictions. Works for two people or a full table.</p>
+                    </div>
+                    <div style="background-color: var(--clr-black-light); padding: 1.5rem; border-radius: var(--border-radius); border: 1px solid rgba(212, 175, 55, 0.2);">
+                        <h4 style="color: var(--clr-beige); font-size: 1.1rem; margin-bottom: 0.8rem;">Transferable</h4>
+                        <p style="color: var(--clr-gray); font-size: 0.9rem;">Your pass can be gifted or shared. Perfect for a partner or a food-obsessed friend. One pass, one set of credits.</p>
+                    </div>
+                    <div style="background-color: var(--clr-black-light); padding: 1.5rem; border-radius: var(--border-radius); border: 1px solid rgba(212, 175, 55, 0.2);">
+                        <h4 style="color: var(--clr-beige); font-size: 1.1rem; margin-bottom: 0.8rem;">No Gimmicks</h4>
+                        <p style="color: var(--clr-gray); font-size: 0.9rem;">Show your book to your server at the end of the meal, upon meeting requirements recieve dining credits no questions asked. We built this for people who hate friction as much as they love a great meal.</p>
+                    </div>
+                </div>
+                
+                <div class="value-bar fade-in" style="background-color: #071510; padding: 3rem 2rem; border-radius: var(--border-radius); margin-top: 4rem; display: flex; align-items: center; gap: 2rem; border: 1px solid rgba(201,169,110,0.3); flex-wrap: wrap;">
+                    <div style="display: flex; gap: 2rem; align-items: center; flex: 1; min-width: 300px; justify-content: space-around;">
+                        <div style="text-align: center;">
+                            <div style="color: #c9a96e; font-size: 3.5rem; font-style: italic; font-family: var(--font-heading); line-height: 1;">$500</div>
+                            <div style="color: rgba(255,255,255,0.45); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.8rem;">Total pass value</div>
+                        </div>
+                        <div style="width: 1px; height: 60px; background-color: rgba(201,169,110,0.25);"></div>
+                        <div style="text-align: center;">
+                            <div style="color: #c9a96e; font-size: 3.5rem; font-style: italic; font-family: var(--font-heading); line-height: 1;">20</div>
+                            <div style="color: rgba(255,255,255,0.45); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.8rem;">Restaurants</div>
+                        </div>
+                        <div style="width: 1px; height: 60px; background-color: rgba(201,169,110,0.25);"></div>
+                        <div style="text-align: center;">
+                            <div style="color: #c9a96e; font-size: 3.5rem; font-style: italic; font-family: var(--font-heading); line-height: 1;">$25</div>
+                            <div style="color: rgba(255,255,255,0.45); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.8rem;">Per visit</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; padding-left: 2rem; border-left: 1px solid rgba(201,169,110,0.25);">
+                        <p style="color: var(--clr-white); font-size: 1.2rem; line-height: 1.6; margin: 0;">Visit just <strong>4 restaurants</strong> and you've already made your money back. Everything after that is the city, on us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Featured Picks</h2>
+                    <p>Hand-selected establishments that define excellence.</p>
+                </div>
+                
+                <div class="cards-grid">
+                    <article class="card fade-in-up">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up delay-1">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up delay-2">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up delay-1">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up delay-2">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up delay-1">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up delay-2">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in-up">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up delay-1">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up delay-2">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up delay-1">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up delay-2">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up delay-1">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up delay-2">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                    
+                    <article class="card fade-in-up delay-1">
+                        <div class="card-img-wrapper" style="background-color: #222; display: flex; align-items: center; justify-content: center; height: 250px;">
+                            <span style="color: var(--clr-gray); font-style: italic;">Image coming soon</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Featured Pick</h3>
+                            <a href="#" class="card-link">Read Review <span>&rarr;</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section bg-dark text-light">
+            <div class="container about-container">
+                <div class="about-image fade-in" style="position: relative;">
+                    <div style="position: absolute; top: 0; bottom: 0; left: -12px; width: 3px; background-color: var(--clr-beige);"></div>
+                    <img src="assets/about.png" alt="Restaurant Interior" loading="lazy" style="border-radius: var(--border-radius); position: relative; z-index: 1;">
+                </div>
+                <div class="about-content fade-in">
+                    <h2>Every Table in This Guide Earned Its Place.</h2>
+                    <p>Hidden Gem started as a simple frustration, too many lists, not enough taste. So we built the guide we actually wanted: thirty restaurants in San Francisco that are worth your time, your money, and your Saturday night.</p>
+                    <p>Every pick is personally vetted. Nothing is sponsored. Nobody paid to be included.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">HIDDEN GEM</a>
+                    <p>Your guide to the city's finest dining experiences.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">The Guide</a></li>
+                        <li><a href="#sf2026">San Francisco 2026</a></li>
+                        <li><a href="#how-it-works">How it Works</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hidden Gems Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
